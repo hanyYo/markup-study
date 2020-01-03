@@ -10,7 +10,12 @@ const routes = [
     name: 'markupIndex',
     component: () => import('@/views/markupIndex'),
     children: markup
-  }
+  },
+  {
+    path: '/*',
+    name: 'common/PageNotFound',
+    component: () => import('@/views/common/PageNotFound'),
+  },
 ]
 
 const router = new VueRouter({
